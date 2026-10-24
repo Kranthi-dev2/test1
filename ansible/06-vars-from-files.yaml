@@ -1,8 +1,8 @@
 - name: variables from playbook
   hosts: localhost
   vars_files:
-  - variables.yaml
+   - variables.yaml
   tasks:
-  - name: check variables
-    ansible.builtin.debug:
+   - name: check variables
+     ansible.builtin.debug:
       msg: "HI MyName is {{Name}}, Age {{Age}} and City is {{City}}"
