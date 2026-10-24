@@ -1,0 +1,22 @@
+- name: ramesh
+  age: 47
+  Dob: "12-10-2022"
+  address:
+   street: Tngo
+   city: Hyd
+   state: TS
+  email: devops.kranthi.bond
+
+- name: srinu
+  age: 33
+  Dob: "3-02-2000"
+  addresses:
+  - adress:
+    street: Vinay nagar
+    city: Hyd
+    state: Tg
+  - adress: chiknagar
+    street: Vinayaknagar
+    city: Hyd
+    state: Tg
+  email: store.kranthi.bond
