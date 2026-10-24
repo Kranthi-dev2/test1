@@ -1,0 +1,10 @@
+- name: variables from playbook
+  hosts: localhost
+  vars:
+    Name: "Siva"
+    Age: "30"
+    City: "Hyderabad"
+  tasks:
+   - name: checking variables
+     ansible.builtin.debug:
+      msg: "HI MyName is {{Name}}, Age {{Age}} and City is {{City}}"
