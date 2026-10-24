@@ -1,4 +1,3 @@
-vars:
-    Name: "Siva"
-    Age: "30"
-    City: "Hyderabad"
+Name: "Siva"
+Age: "30"
+City: "Hyderabad"
