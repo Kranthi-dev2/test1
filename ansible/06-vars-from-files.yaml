@@ -3,6 +3,6 @@
   vars_files:
   - variables.yaml
   tasks:
-  - name: checking variables
+  - name: check variables
     ansible.builtin.debug:
       msg: "HI MyName is {{Name}}, Age {{Age}} and City is {{City}}"
