@@ -17,4 +17,4 @@
   - name: create user
     ansible.builtin.user:
       name: roboshop
-    when: user.rc =! 0 #condtion if rc not eq 0,then only create roboshop user
+    when: user.rc != 0 #condtion if rc not eq 0,then only create roboshop user
