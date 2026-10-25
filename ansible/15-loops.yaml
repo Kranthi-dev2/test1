@@ -4,10 +4,10 @@
   tasks:
   - name: install or uninstall packages
     ansible.builtin.package:
-      name: "{{item}}"   # item is default keyword for loops
-      state: "{{item.state}}" # it will install
-    loop: 
-    - {name: 'git', state: 'present'}
-    - {name: 'python', state: 'absent'}
-    - {name: 'mysql', state: 'absent'}
-    - {name: 'nginx', state: 'present'}
+      name: "{{ item.name }}"   # loop item is a dict; use the package name field
+      state: "{{ item.state }}" # install or uninstall based on each item
+    loop:
+      - {name: 'git', state: 'present'}
+      - {name: 'python', state: 'absent'}
+      - {name: 'mysql', state: 'absent'}
+      - {name: 'nginx', state: 'present'}
