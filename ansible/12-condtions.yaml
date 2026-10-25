@@ -9,3 +9,12 @@
   - name: print the value
     ansible.builtin.debug:
       msg: "user output is: {{user}}"
+
+  - name: print RC value
+    ansible.builtin.debug:
+      msg: "exit status is: {{user.rc}}"
+
+  - name: create user
+    ansible.builtin.user:
+      name: roboshop
+    when: user.rc =! 0 #condtion if rc not eq 0,then only create roboshop user
