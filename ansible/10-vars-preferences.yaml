@@ -1,0 +1,21 @@
+- name: variables from PLAY level
+  hosts: localhost
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: PERSON
+    prompt: Please enter your name
+    private: false #user can see what they are entering
+  - name: WISHES
+    prompt: Please enter your wishes
+    private: false #user can't see what they are entering
+  vars:
+    PERSON: "Kanthi from PLAY"
+    WISHES: "Morning from PLAY"
+  tasks:
+  - name: check variables
+    vars:
+      PERSON: "Kanthi from task"
+      WISHES: "Morning from task"
+    ansible.builtin.debug:
+      msg: "Hello {{PERSON}}, Good {{WISHES}}"

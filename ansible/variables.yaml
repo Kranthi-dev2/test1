@@ -1,3 +1,7 @@
 Name: "Siva"
 Age: "30"
 City: "Hyderabad"
+
+
+PERSON: "Kanthi from vars.yaml"
+WISHES: "Morning from vars.yaml"
