@@ -4,7 +4,7 @@
   - name: check roboshop user is exists or not
     ansible.builtin.command: id roboshop
     register: user # 'id roboshop' command output stores in this user variable
-    ignore_error: true # it will bypass the error and ignoresif error occurs
+    ignore_errors: true # it will bypass the error and ignoresif error occurs
 
   - name: print the value
     ansible.builtin.debug:
